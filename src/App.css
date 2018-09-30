@@ -1,6 +1,7 @@
 body {
   margin: auto;
   width: 100%;
+  background:#788692;
 }
 
 
@@ -14,7 +15,6 @@ body {
 
 /* -------------------------- Navigation CSS ------------------------ */
 #navigation-container {
-  background: black;
   height: 100%;
   width: 100%;
   color:#fff;
@@ -30,11 +30,11 @@ body {
 #sidemenu-container {
   position: fixed;
   height: 86vh;
-  background: #444;
+  background-color: rgba(0, 0, 0, 0.21);
   margin-left: 10px;
   border-radius: 20px;
   padding: 20px 0;
-  width: 20vw;
+  width: 350px;
   color: #FFF;
   display: flex;
   justify-content: center;

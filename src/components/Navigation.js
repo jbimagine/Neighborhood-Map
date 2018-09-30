@@ -9,7 +9,6 @@ class Navigation extends Component {
 
   state = {
     isMenuVisible: false,
-    sideMenuPosition: '-200px'
   }
 
   handleMenuVisibility = () => {
@@ -19,7 +18,7 @@ class Navigation extends Component {
   render() {
     return (
       <div>
-        <div style = {{ padding:'0 20px', background: 'black', height: '60px', borderRadius: '10px', margin: '10px' }} >
+        <div style = {{ padding:'0 20px', backgroundColor: '#00000036', height: '60px', borderRadius: '10px', margin: '10px' }} >
           <div id='navigation-container'>
           <div id = 'navigation-title'>
           <h2>Neighborhood Map</h2>
