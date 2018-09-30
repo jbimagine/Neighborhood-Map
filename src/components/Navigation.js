@@ -19,7 +19,7 @@ class Navigation extends Component {
   render() {
     return (
       <div>
-        <div style = {{ padding:'0 20px', background: 'black', height: '60px' }} >
+        <div style = {{ padding:'0 20px', background: 'black', height: '60px', borderRadius: '10px', margin: '10px' }} >
           <div id='navigation-container'>
           <div id = 'navigation-title'>
           <h2>Neighborhood Map</h2>

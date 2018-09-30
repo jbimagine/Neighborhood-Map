@@ -29,10 +29,12 @@ body {
 /* -------------------------- Side Menu CSS ------------------------ */
 #sidemenu-container {
   position: fixed;
-  height: 100%;
+  height: 86vh;
   background: #444;
-  padding: 20px;
-  width: 250px;
+  margin-left: 10px;
+  border-radius: 20px;
+  padding: 20px 0;
+  width: 20vw;
   color: #FFF;
   display: flex;
   justify-content: center;

@@ -6,7 +6,7 @@ class Sidemenu extends Component {
   render() {
     return (
       <div id = 'sidemenu-container'>
-        <div>Hello World</div>
+        <div></div>
       </div>
     );
   }
