@@ -16,6 +16,8 @@ class Navigation extends Component {
   }
 
   render() {
+    const { isMenuVisible } =this.state;
+    
     return (
       <div>
         <div style = {{ padding:'0 20px', backgroundColor: '#00000036', height: '60px', borderRadius: '10px', margin: '10px' }} >
@@ -31,9 +33,9 @@ class Navigation extends Component {
           </div>
 
         </div>
-        {
-          this.state.isMenuVisible?<Sidemenu/>:null
-        }
+        <Sidemenu
+        isMenuVisible = {isMenuVisible}
+        />
         </div>
     );
   }
