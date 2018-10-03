@@ -20,7 +20,7 @@ class Navigation extends Component {
     
     return (
       <div>
-        <div style = {{ padding:'0 20px', backgroundColor: '#00000036', height: '60px', borderRadius: '20px', margin: '10px' }} >
+        <div style = {{ padding:'0 20px', backgroundColor: 'rgba(0, 0, 0, 0.61)', height: '60px', borderRadius: '10px', margin: '10px', zIndex:'2', width:'97vw', position:'fixed' }} >
           <div id='navigation-container'>
           <div id = 'navigation-title'>
           <h2>Neighborhood Map</h2>

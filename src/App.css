@@ -1,16 +1,13 @@
-body {
-  margin: auto;
-  width: 100%;
-  background:#788692;
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-
-#map-container {
-  display:flex;
-  justify-content: center;
-  align-items:center;
-  height:100%;
-  width:100%;
+/* -------------------------- Map CSS ------------------------ */
+#map {
+  height: 100vh;
 }
 
 /* -------------------------- Navigation CSS ------------------------ */
@@ -30,7 +27,7 @@ body {
 #sidemenu-container {
   position: fixed;
   height: 86vh;
-  background-color: rgba(0, 0, 0, 0.21);
+  background-color: rgba(0, 0, 0, 0.61);
   margin-left: 10px;
   border-radius: 20px;
   padding: 20px 0;
@@ -38,6 +35,8 @@ body {
   color: #FFF;
   display: flex;
   justify-content: center;
+  top:100px;
+  z-index: 2;
 }
 
 /* -------------------------- Map CSS ------------------------ */
