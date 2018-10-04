@@ -15,8 +15,8 @@ class Map extends Component {
 
   initMap = () => {
     new window.google.maps.Map(document.getElementById('map'), {
-      center: {lat: -34.397, lng: 150.644},
-      zoom: 8,
+      center: {lat: 37.761640, lng: -122.483890},
+      zoom: 15,
       mapTypeControl: true,
           mapTypeControlOptions: {
               style: window.google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
