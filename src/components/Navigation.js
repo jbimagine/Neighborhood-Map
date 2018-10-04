@@ -20,12 +20,12 @@ class Navigation extends Component {
     
     return (
       <div>
-        <div style = {{ padding:'0 20px', backgroundColor: 'rgba(0, 0, 0, 0.61)', height: '60px', borderRadius: '10px', margin: '10px', zIndex:'2', width:'97vw', position:'fixed' }} >
+        <div style = {{ height: '60px', margin: '10px 0', zIndex:'2', width:'100%', position:'fixed', display: 'flex', justifyContent:'center' }} >
           <div id='navigation-container'>
           <div id = 'navigation-title'>
           <h2>Neighborhood Map</h2>
           </div> 
-            <div  style = {{ cursor:'pointer' }} onClick={() => this.handleMenuVisibility()} >
+            <div  style = {{ cursor:'pointer', padding:'20px' }} onClick={() => this.handleMenuVisibility()} >
             {
               this.state.isMenuVisible? < img style = {{height: '18px'}} src = {close_icon} alt = {'menu close icon'}/>:< img style = {{height: '18px'}} src = {menu_icon} alt = {'menu open icon'}/>
             }

@@ -13,15 +13,22 @@ html, body {
 /* -------------------------- Navigation CSS ------------------------ */
 #navigation-container {
   height: 100%;
-  width: 100%;
-  color:#fff;
-  display:flex;
+  width: 99%;
+  background-color: rgba(0, 0, 0, 0.61);
+  color: #fff;
+  display: flex;
   justify-content: space-between;
+  border-radius: 10px;
   align-items: center;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
-/* 
+
 #navigation-title {
-} */
+  padding:20px;
+}
 
 /* -------------------------- Side Menu CSS ------------------------ */
 #sidemenu-container {
