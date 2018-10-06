@@ -5,6 +5,9 @@ import './App.css';
 
 
 class App extends Component {
+  state = {
+    isMenuVisible: false,
+  }
 
   componentDidMount (){
     document.body.classList.add('map-body')
@@ -14,10 +17,17 @@ class App extends Component {
     document.body.classList.remove('map-body')
   }
 
+  handleMenuVisibility = () => {
+    this.setState({isMenuVisible: !this.state.isMenuVisible})
+  }
+
   render() {
     return (
       <div>
-      <Navigation/>
+      <Navigation
+      isMenuVisible = {this.state.isMenuVisible}
+      handleMenuVisibility = {this.handleMenuVisibility}
+      />
       <Map/>
       </div>
 

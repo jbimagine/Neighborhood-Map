@@ -7,16 +7,8 @@ import Sidemenu from './Sidemenu';
 
 class Navigation extends Component {
 
-  state = {
-    isMenuVisible: false,
-  }
-
-  handleMenuVisibility = () => {
-    this.setState({isMenuVisible: !this.state.isMenuVisible})
-  }
-
   render() {
-    const { isMenuVisible } =this.state;
+    const { isMenuVisible, handleMenuVisibility } =this.props;
     
     return (
       <div>
@@ -25,9 +17,9 @@ class Navigation extends Component {
           <div id = 'navigation-title'>
           <h2>Neighborhood Map</h2>
           </div> 
-            <div  style = {{ cursor:'pointer', padding:'20px' }} onClick={() => this.handleMenuVisibility()} >
+            <div  style = {{ cursor:'pointer', padding:'20px' }} onClick={() => handleMenuVisibility()} >
             {
-              this.state.isMenuVisible? < img style = {{height: '18px'}} src = {close_icon} alt = {'menu close icon'}/>:< img style = {{height: '18px'}} src = {menu_icon} alt = {'menu open icon'}/>
+              isMenuVisible? < img style = {{height: '18px'}} src = {close_icon} alt = {'menu close icon'}/>:< img style = {{height: '18px'}} src = {menu_icon} alt = {'menu open icon'}/>
             }
             </div>
           </div>
