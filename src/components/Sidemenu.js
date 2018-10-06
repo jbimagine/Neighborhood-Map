@@ -10,7 +10,12 @@ class Sidemenu extends Component {
       <div>
        
           <div id = 'sidemenu-container'style = {isMenuVisible?{left: '0px', transitionDuration: '0.5s'}:{left: '-375px', transitionDuration: '0.5s'}}>
-            <div></div>
+          <form id = 'sidemenu-form' >
+            <label style = {{width: '80%', display:'flex'}}>
+            
+              <input id = 'sidemenu-search-box' type="text" name="name"/>
+            </label>
+          </form>
           </div>
        
       </div>
