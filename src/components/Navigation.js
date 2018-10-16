@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import '../App.css';
 import close_icon from '../imgs/close_icon.svg'
 import menu_icon from '../imgs/menu_icon.svg'
-import Sidemenu from './Sidemenu';
 
 
 class Navigation extends Component {
@@ -25,9 +24,7 @@ class Navigation extends Component {
           </div>
 
         </div>
-        <Sidemenu
-        isMenuVisible = {isMenuVisible}
-        />
+        
         </div>
     );
   }
