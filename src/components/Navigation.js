@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import '../App.css';
 import close_icon from '../imgs/close_icon.svg'
 import menu_icon from '../imgs/menu_icon.svg'
-import Sidemenu from './Sidemenu';
 
 
 class Navigation extends Component {
@@ -11,7 +10,7 @@ class Navigation extends Component {
     const { isMenuVisible, handleMenuVisibility } =this.props;
     
     return (
-      <div>
+      <nav>
         <div style = {{ height: '60px', margin: '10px 0', zIndex:'2', width:'100%', position:'fixed', display: 'flex', justifyContent:'center' }} >
           <div id='navigation-container'>
           <div id = 'navigation-title'>
@@ -25,10 +24,8 @@ class Navigation extends Component {
           </div>
 
         </div>
-        <Sidemenu
-        isMenuVisible = {isMenuVisible}
-        />
-        </div>
+        
+        </nav>
     );
   }
 }
