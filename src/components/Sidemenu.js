@@ -12,7 +12,6 @@ class Sidemenu extends Component {
     if(this.state.query.trim() !== ''){
       const venues = this.props.venues.filter(venue => venue.name.toLowerCase().includes(this.state.query.toLowerCase())
       );
-      console.log(venues);
       return venues;
     }
     return this.props.venues;
@@ -46,7 +45,7 @@ class Sidemenu extends Component {
           <form id = 'sidemenu-form' >
             <label style = {{width: '80%', display:'flex'}}>
             
-              <input id = 'sidemenu-search-box' type="text" name="name"/>
+              <input aria-label = 'Filter venue list' role ='search' id = 'sidemenu-search-box' type="text" name="name" placeholder = "Filter Venues"/>
             </label>
           </form>
           <div id = 'sidemenu-content-container'>  

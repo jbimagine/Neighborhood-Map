@@ -49,7 +49,7 @@ class Map extends Component {
 
   render() {
     return (
-      <main>
+      <main aria-label = 'map of neighborhood' role = 'application'>
         <MyMapComponent
         {...this.props}
         googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyDiucAl8uSDKELoUW25LTlq7xU7DsGG2hY"

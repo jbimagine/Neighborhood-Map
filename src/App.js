@@ -37,8 +37,8 @@ class App extends Component {
         }
       });
       this.setState({ venues, center, markers })
-      console.log(results);
     })
+
   }
 
   closeAllMarkers = () => {
@@ -56,17 +56,16 @@ class App extends Component {
 
     const venue = this.state.venues.find(venue => venue.id === marker.id)
   
+
     NeighborhoodApi.getVenueDetails(marker.id).then(res => {
       const newVenue = Object.assign(venue, res.response.venue);
       this.setState({venues:Object.assign(this.state.venues, newVenue)})
-      console.log(newVenue);
     })
   };
 
   handleListItemClick = venue => {
     const marker = this.state.markers.find(marker => marker.id === venue.id)
     this.handleMarkerClick(marker);
-    console.log(venue);
   }
 
   componentWillUnmount (){
