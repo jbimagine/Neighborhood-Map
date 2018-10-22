@@ -41,7 +41,7 @@ class Sidemenu extends Component {
       <div>
        
           <div id = 'sidemenu-container'style = {isMenuVisible?{left: '0px', transitionDuration: '0.5s'}:{left: '-375px', transitionDuration: '0.5s'}} onChange ={this.handleChange}>
-          <div style = {{ width: '100%', overflowY:'scroll' }}>
+          <div style = {{ width: '100%' }}>
           <form id = 'sidemenu-form' >
             <label style = {{width: '80%', display:'flex'}}>
             
