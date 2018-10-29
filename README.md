@@ -2,12 +2,12 @@
 Final project for the Udacity Front End Nanodegree
 
 ## Overview:
-The Neighborhood-Map is a single page app, which uses ReactJS, React Google Maps, and FourSquare API.  It enables users to search for interesting locations or places around the San Francisco Area
+The Neighborhood-Map is a single page app, which uses ReactJS, Google Maps API, and FourSquare API.  It enables users to search for interesting locations or places around the San Francisco Area
 
 ## Requirements:
 * [ReactJS:](https://reactjs.org) A JavaScript library for building user interface.
 * [FourSquare:](https://foursquare.com/developers) A local search-and-discovery service with API solution and documentation.
-* [Google Maps React :](https://tomchentw.github.io/react-google-maps/#installation) An industry-leading mapping solution conveniently packaged in a react component!
+* [Google Maps Api :](https://cloud.google.com/maps-platform/) An industry-leading mapping solution!
 
 ## How to Use the App:
 1. Clone or Download the file into your local drive.  If downloading, you can use this link: https://github.com/jbimagine/Neighborhood-Map.git
