@@ -7,8 +7,7 @@ import Sidemenu from './components/Sidemenu';
 class App extends Component {
   state = {
     query:'',
-    isMenuVisible:true,
-    error:false
+    isMenuVisible:true
   }
 
   componentDidMount() {
@@ -85,7 +84,6 @@ class App extends Component {
       this.setState({ filteredVenues:this.venues });
     }).catch(()=> {
       alert('the venues are not available at this time, please try refreshing the page')
-      this.setState({ error:true })
     })
   }
 
