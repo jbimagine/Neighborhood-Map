@@ -5,7 +5,7 @@ import VenueList from './VenueList';
 class Sidemenu extends Component {
 
     render(){
-        const { isMenuVisible, query, filteredVenues, handleListItemClick } = this.props;
+        const { isMenuVisible, query } = this.props;
         return (
             <div id = 'sidemenu-container'style = {isMenuVisible?{left: '0px', transitionDuration: '0.5s'}:{left: '-375px', transitionDuration: '0.5s'}}>
           <div style = {{ width: '100%', overflowY:'scroll' }}>

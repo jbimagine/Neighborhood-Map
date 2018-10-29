@@ -7,7 +7,8 @@ import Sidemenu from './components/Sidemenu';
 class App extends Component {
   state = {
     query:'',
-    isMenuVisible:true
+    isMenuVisible:true,
+    error:false
   }
 
   componentDidMount() {
@@ -22,7 +23,6 @@ class App extends Component {
     .then(values => {
       let google = values[0];
       this.venues = values[1].response.venues;
-      this.photos = values;
       this.google = google;
       this.markers = [];
       this.infowindow = new google.maps.InfoWindow();
@@ -66,7 +66,16 @@ class App extends Component {
 				  setTimeout(() => { marker.setAnimation(null) }, 1500);
 			  });
         google.maps.event.addListener(marker, 'click', () => {
-  			   this.infowindow.setContent(marker.name);
+          console.log(marker.venue.location.formattedAddress)
+          let streetAddress = marker.venue.location.formattedAddress[0];
+          let cityStateZip = marker.venue.location.formattedAddress[1];
+          let country = marker.venue.location.formattedAddress[2];
+
+          this.handleFilterLocation = ()=> {
+            return `<div class><div>${marker.name}</div><br/>${streetAddress}<br/>${cityStateZip}<br/>${country}</div>`;
+          }
+          
+  			   this.infowindow.setContent(this.handleFilterLocation());
 				   this.map.setCenter(marker.position);
 				   this.infowindow.open(this.map, marker);
 				   this.map.panBy(0, -125);
@@ -76,7 +85,8 @@ class App extends Component {
       });
       this.setState({ filteredVenues:this.venues });
     }).catch(()=> {
-      console.log('the venues are not available at this time, please try again later')
+      alert('the venues are not available at this time, please try again later')
+      this.setState({ error:true })
     })
   }
 
@@ -91,31 +101,41 @@ class App extends Component {
      this.setState({ filteredVenues : filter, query })
   }
 
+ 
   handleListItemClick = (venue) => {
+          let streetAddress = venue.location.formattedAddress[0];
+          let cityStateZip = venue.location.formattedAddress[1];
+          let country = venue.location.formattedAddress[2];
+
+          let handleFilterLocation = ()=> {
+            return `<div class><div>${marker.name}</div><br/>${streetAddress}<br/>${cityStateZip}<br/>${country}</div>`;
+          }
     let marker = this.markers.filter(marker => marker.id ===venue.id)[0];
-    this.infowindow.setContent(marker.name);
+    this.infowindow.setContent(handleFilterLocation());
     this.map.setCenter(marker.position);
     this.infowindow.open(this.map, marker);
     this.map.panBy(0, -125);
     if (marker.getAnimation() !== null) { marker.setAnimation(null); }
 				  else { marker.setAnimation(this.google.maps.Animation.BOUNCE); }
-				  setTimeout(() => { marker.setAnimation(null) }, 1500);
+          setTimeout(() => { marker.setAnimation(null) }, 1500);
+          
   }
   
   handleMenuVisibility = () => {
-    this.setState({isMenuVisible: !this.state.isMenuVisible})
+    this.setState({ isMenuVisible: !this.state.isMenuVisible })
   }
 
   render() {
     return (
       <div> 
       <Navigation
-      isMenuVisible = {this.state.isMenuVisible}
-      handleMenuVisibility = {this.handleMenuVisibility}
+      isMenuVisible = { this.state.isMenuVisible }
+      handleMenuVisibility = { this.handleMenuVisibility }
       />
       <Sidemenu
       {...this.state}
-      handleListItemClick = {this.handleListItemClick}
+      handleListItemClick = { this.handleListItemClick }
+      getFilterDetails = { this.getFilterDetails }
       />
       <div id="map"></div>
       </div>
