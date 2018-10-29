@@ -6,7 +6,7 @@ const VERSION = '20181027';
 
 export function load_google_maps() {
 
-    return new Promise (function(resolve, reject){
+    return new Promise (function(resolve){
         // Define the global callback that will run when google maps is loaded
         window.resolveGoogleMapsPromise = function() {
             // Resolve the google object
