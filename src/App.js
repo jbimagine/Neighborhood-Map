@@ -66,7 +66,6 @@ class App extends Component {
 				  setTimeout(() => { marker.setAnimation(null) }, 1500);
 			  });
         google.maps.event.addListener(marker, 'click', () => {
-          console.log(marker.venue.location.formattedAddress)
           let streetAddress = marker.venue.location.formattedAddress[0];
           let cityStateZip = marker.venue.location.formattedAddress[1];
           let country = marker.venue.location.formattedAddress[2];
@@ -85,7 +84,7 @@ class App extends Component {
       });
       this.setState({ filteredVenues:this.venues });
     }).catch(()=> {
-      alert('the venues are not available at this time, please try again later')
+      alert('the venues are not available at this time, please try refreshing the page')
       this.setState({ error:true })
     })
   }
