@@ -29,6 +29,7 @@ export function load_places(){
     var apiURL = `${URL_PREFIX}/search?client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}&v=${VERSION}%20&limit=50&near=${city}&query=${query}`;
     return fetch(apiURL)
     .then(resp => resp.json())
+    .catch(() => alert('there was a loading error.  Please close this pop-up and refresh your page'))
 }
 
 export function load_details(VENUE_ID){
@@ -36,4 +37,5 @@ export function load_details(VENUE_ID){
     var apiURL= `${URL_PREFIX}/${VENUE_ID}?client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}&v=${VERSION}`;
     return fetch(apiURL)
     .then(resp => resp.json())
+    .catch(() => alert('there was a loading error.  Please close this pop-up and refresh your page'))
 }

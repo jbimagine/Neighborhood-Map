@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { load_google_maps, load_places, load_details } from './utils';
+import { load_google_maps, load_places } from './utils';
 import Navigation from './components/Navigation';
 import Sidemenu from './components/Sidemenu';
 
