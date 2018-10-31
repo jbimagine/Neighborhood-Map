@@ -14,6 +14,12 @@ export function load_google_maps() {
             // Delete the global callback to tidy up since it is no longer needed
             delete window.resolveGoogleMapsPromise;
         }
+
+        // Add a global gm_authFailure function for when the
+        // Google Maps fails to load due to authentication issues
+        window.gm_authFailure = () => { 
+            alert('Error: We ran into an issue.  Please check the console for more details or try refreshing the page.');
+        }
         //  Load the google maps api
         const script = document.createElement('script');
         const API_KEY = 'AIzaSyDCFIMNeSs4QX_a2p-uM6575ThxdwfePV0';
