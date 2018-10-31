@@ -132,9 +132,9 @@ class App extends Component {
       <Sidemenu
       {...this.state}
       handleListItemClick = { this.handleListItemClick }
-      getFilterDetails = { this.getFilterDetails }
+      filterVenues = { this.filterVenues }
       />
-      <div id="map"></div>
+      <div aria-label = "neighborhood map" role = "application" id="map" tabindex = "-1"></div>
       </div>
     );
   }

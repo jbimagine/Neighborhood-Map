@@ -15,6 +15,9 @@ export function load_google_maps() {
             delete window.resolveGoogleMapsPromise;
         }
 
+         let googleMapsError = () => {
+            alert('Error: We ran into an issue.  Please check the console for more details or try refreshing the page.');
+        }
         // Add a global gm_authFailure function for when the
         // Google Maps fails to load due to authentication issues
         window.gm_authFailure = () => { 
@@ -24,6 +27,7 @@ export function load_google_maps() {
         const script = document.createElement('script');
         const API_KEY = 'AIzaSyDCFIMNeSs4QX_a2p-uM6575ThxdwfePV0';
         script.src = `https://maps.googleapis.com/maps/api/js?key=${API_KEY}&callback=resolveGoogleMapsPromise`;
+        script.onerror = googleMapsError;
         script.async = true;
         document.body.appendChild(script);
     });

@@ -17,7 +17,7 @@ class Sidemenu extends Component {
               type="text" name="name" 
               placeholder = "Filter Venues" 
               value = {query} 
-              onChange = {(e)=>{this.filterVenues(e.target.value)}} 
+              onChange = {(e)=>{this.props.filterVenues(e.target.value)}} 
               />
             </label>
           </form>

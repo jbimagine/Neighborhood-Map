@@ -9,7 +9,7 @@ class VenueList extends Component {
       <div id = 'sidemenu-content'>
       {
         filteredVenues && filteredVenues.length > 0 && filteredVenues.map((venue, index)=> (
-          <div key = {index} aria-label = {venue.name} role = 'list' className='list-item' onClick = {()=> { handleListItemClick(venue); }}>
+          <div key = {index} tabIndex = {0} aria-label = {venue.name} role = 'list' className='list-item' onClick = {()=> { handleListItemClick(venue); }}>
              {venue.name}
           </div>
         ))
