@@ -134,7 +134,7 @@ class App extends Component {
       handleListItemClick = { this.handleListItemClick }
       filterVenues = { this.filterVenues }
       />
-      <div aria-label = "neighborhood map" role = "application" id="map" tabindex = "-1"></div>
+      <div aria-label = "neighborhood map" role = "application" id="map" tabIndex = "-1"></div>
       </div>
     );
   }
